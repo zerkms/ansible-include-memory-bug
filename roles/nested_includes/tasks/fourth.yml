@@ -1,0 +1,28 @@
+---
+
+- set_fact:
+    fourth_items:
+        - fourth one
+        - fourth two
+        - fourth three
+        - fourth four
+        - fourth five
+
+- include: fifth.yml
+  with_items: "{{ fourth_items }}"
+  loop_control:
+    loop_var: inner_item
+
+- include: fifth.yml
+  with_items: "{{ fourth_items }}"
+  loop_control:
+    loop_var: inner_item
+
+- include: fifth.yml
+  with_items: "{{ fourth_items }}"
+  loop_control:
+    loop_var: inner_item
+    
+- name: d
+  debug:
+    msg: "finally {{ item }}"

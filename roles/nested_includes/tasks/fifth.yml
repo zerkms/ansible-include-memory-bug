@@ -1,0 +1,6 @@
+---
+
+- set_fact:
+    fifth_fact: "value"
+    
+- include: sixth.yml

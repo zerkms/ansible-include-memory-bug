@@ -1,0 +1,20 @@
+---
+
+- set_fact:
+    second_items:
+        - one
+        - two
+        - three
+        - four
+        - five
+        - six
+        - seven
+        - eight
+        - nine
+        - ten
+        - eleven
+        - twelve
+        - thirteen
+
+- include: third.yml
+  with_items: "{{ second_items }}"
